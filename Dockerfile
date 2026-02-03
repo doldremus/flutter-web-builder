@@ -5,7 +5,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     && rm -rf /var/lib/apt/lists/*
 
 ARG FLUTTER_SDK_VERSION=3.38.9
-RUN git clone --depth 1 --branch ${FLUTTER_SDK_VERSION} https://github.com /opt/flutter
+RUN git clone --depth 1 --branch ${FLUTTER_SDK_VERSION} https://github.com/flutter/flutter /opt/flutter
 
 ENV PATH="/opt/flutter/bin:/opt/flutter/bin/cache/dart-sdk/bin:${PATH}"
 
